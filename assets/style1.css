@@ -1,0 +1,175 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Ensure scrolling is enabled */
+
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Changed to 5 columns */
+    gap: 5px; /* Reduced gap between products */
+}
+
+.product {
+    width: 400px;
+    height: 600px;
+    transform: translateY(-100%);
+    animation: slideIn 0.5s forwards;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add transition for hover effect */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.product .productImage {
+    width: 100%; /* Ensure images are responsive */
+    height: 300px; /* Maintain aspect ratio */
+    background-size: cover;
+    background-position: center;
+}
+
+.productTitle, .productInfo, .getAccessBtn {
+    margin: 2px 0; /* Reduced spacing */
+}
+
+.getAccessBtn {
+    background-color: #6a0dad; /* Purple button background */
+    color: #ffffff; /* White text color */
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add border-radius for a softer button appearance */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.getAccessBtn:hover {
+    background-color: #5a0ca0; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    margin: 10px 5px;
+    background-color: #800080; /* Dark purple cancel button */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.cancelbtn:hover {
+    background-color: #6a0dad; /* Purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.login-btn {
+	display: grid;
+
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #6a0dad; /* Purple button background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add border-radius for a softer button appearance */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.login-btn:hover {
+    background-color: #5a0ca0; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.no-play-gif {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Styling for Search Bar */
+form {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+    border-color: #5a0ca0;
+}
+
+button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #5a0ca0;
+    transform: scale(1.05);
+}
+/* Styling for Search Form */
+.search-form {
+    text-align: center;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Input Field */
+.search-form input[type="text"] {
+    width: 250px;
+    padding: 12px;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.search-form input[type="text"]:focus {
+    border-color: #5a0ca0;
+}
+
+/* Search Button */
+.search-form button {
+    background-color: #6a0dad;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor:

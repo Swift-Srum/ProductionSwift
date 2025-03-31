@@ -1,0 +1,103 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Single column for mobile */
+    gap: 5px;
+    padding: 10px; /* Add padding to prevent content from touching the edges */
+}
+
+.product {
+    width: 100%; /* Make product width responsive */
+    max-width: 400px; /* Limit max width for larger screens */
+    height: 500px;
+    margin: 0 auto; /* Center the product horizontally */
+    transform: translateY(0); /* Ensure products start from their position */
+    animation: slideIn 0.5s forwards;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.product:hover {
+    transform: translateY(-10px); /* Move up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.product .productImage {
+    width: 100%; /* Ensure images are responsive */
+    height: 250px; /* Maintain aspect ratio */
+    background-size: cover;
+    background-position: center;
+}
+
+.productTitle, .productInfo, .getAccessBtn {
+    margin: 2px 0; /* Reduced spacing */
+}
+
+.getAccessBtn {
+    background-color: #6a0dad; /* Purple button background */
+    color: #ffffff; /* White text color */
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add border-radius for a softer button appearance */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.getAccessBtn:hover {
+    background-color: #5a0ca0; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    margin: 10px 5px;
+    background-color: #800080; /* Dark purple cancel button */
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.cancelbtn:hover {
+    background-color: #6a0dad; /* Purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.login-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    background-color: #6a0dad; /* Purple button background */
+    color: #ffffff; /* White text color */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Add border-radius for a softer button appearance */
+    text-decoration: none; /* Remove underline from link */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for hover effect */
+}
+
+.login-btn:hover {
+    background-color: #5a0ca0; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.no-play-gif {
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+}

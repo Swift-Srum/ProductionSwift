@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Ensure scrolling is enabled */
+
+}
+        .products {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr); /* Changed to 5 columns */
+            gap: 5px; /* Reduced gap between products */
+        }
+		.product{
+			width: 450px;
+			height: 500px;
+			
+		}
+
+        .product img.productImage {
+            max-width: 100%; /* Ensure images are responsive */
+            height: 200px; /* Maintain aspect ratio */
+        }
+        .productTitle, .productInfo, .getAccessBtn {
+            margin: 2px 0; /* Reduced spacing */
+        }
+        .button {
+            background-color: #6a0dad; /* Purple button background */
+            width: 100%;
+            color: #ffffff; /* White text color */
+            padding: 15px;
+            margin: 10px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Add border-radius for a softer button appearance */
+        }
+		.login-btn {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            background-color: #6a0dad; /* Purple button background */
+            color: #ffffff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px; /* Add border-radius for a softer button appearance */
+            text-decoration: none; /* Remove underline from link */
+        }
